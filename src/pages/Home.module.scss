@@ -1,0 +1,31 @@
+.homeContainer{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 80px;
+}
+.homeCenter{
+  display: flex;
+  justify-content: center;
+}
+.pageBody {
+  max-width: 1440px;
+  margin: auto;
+}
+@media only screen and (max-width: 1100px) {
+  .homeContainer{
+    display: grid;
+    grid-template-columns: auto auto ;
+  }
+  .pageBody {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .homeContainer{
+    display: grid;
+    grid-template-columns: auto ;
+  }
+  .pageBody {
+    margin: auto;
+  }
+}
