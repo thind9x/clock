@@ -6,6 +6,7 @@ interface ButtonProps {
   text: string;
   background?: "green" | "palevioletred" | "greenyellow";
   disabled?: boolean;
+  title?:string;
 }
 
 const Button: FunctionComponent<ButtonProps> = ({
@@ -14,6 +15,7 @@ const Button: FunctionComponent<ButtonProps> = ({
   text,
   background,
   disabled,
+    title
 }) => {
   return (
     <>
@@ -23,6 +25,7 @@ const Button: FunctionComponent<ButtonProps> = ({
         onClick={onClick}
         className={styles?.button}
         disabled={disabled}
+        title={title}
       >
         {text}
       </button>

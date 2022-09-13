@@ -15,9 +15,9 @@ const Home = ({ shopdata, hanldeNext }: HomeProps) => {
   const [data, setData] = useState([]);
   const [isSelectMerchant, setSelectMerchant] = useState(true);
   const router = useRouter();
-  const changeClock = () =>{
-    setSelectMerchant(!isSelectMerchant)
-  }
+  const changeClock = () => {
+    setSelectMerchant(!isSelectMerchant);
+  };
 
   return (
     <>
@@ -45,24 +45,33 @@ const Home = ({ shopdata, hanldeNext }: HomeProps) => {
         />
         <meta
           property="og:site_name"
-          content="Mã giảm giá, Mã Khuyến Mại,Coupon Shopee,Lazada,Tiki"
+          content="Đồng hồ online, Đồng Hồ thế giới, Giờ Việt Nam, giờ quốc tế"
         />
         <meta property="og:url" content="https://coupon.phuongmychi.vn" />
         <meta
           property="og:description"
-          content="Tổng hợp Mã giảm giá, Mã Khuyến Mại,Coupon Shopee,Lazada,Tiki mới nhất"
+          content="Đồng hồ online, Đồng Hồ thế giới, Giờ Việt Nam, giờ quốc tế"
         />
         <meta property="og:type" content="product" />
         <meta property="og:image" content="" />
       </Head>
       <div>
-        <Navbar color={"#4df23a"} title={"Clock"} />
+        {/*<Navbar color={"#4df23a"} title={"Clock"} />*/}
         <div className={styles.pageBody}>
           <div style={{ marginTop: "80px" }}>
-            {isSelectMerchant ? <Clock/> : <DigistalClock/>}
+            {isSelectMerchant ? <Clock /> : <DigistalClock />}
           </div>
-          <div style={{display:'flex',justifyContent:'center'}}>
-            <Button type={"button"} text={isSelectMerchant? "Đồng Hồ Kỹ Thuật Số":"Đồng Hồ Kim"} onClick={changeClock}/>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Button
+              type={"button"}
+              title={
+                isSelectMerchant
+                  ? "Bấm để chuyển đổi sang Đồng Hồ Kỹ Thuật Số"
+                  : "Bấm để chuyển đổi sang Đồng Hồ Kim"
+              }
+              text={isSelectMerchant ? "Đồng Hồ Kỹ Thuật Số" : "Đồng Hồ Kim"}
+              onClick={changeClock}
+            />
           </div>
         </div>
       </div>
